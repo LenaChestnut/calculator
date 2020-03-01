@@ -1,0 +1,209 @@
+body {
+    background-color: #ebebeb;
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+/*button #444554  accent #5941A9 main #172121*/
+
+.container {
+    background-color: #1a1721;
+    margin: 55px auto;
+    padding: 28px;
+    box-sizing: inherit;
+    width: 280px;
+    height: 510px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 9px rgb(182, 181, 182);
+}
+
+.display {
+    display: flex;
+    height: 30%;
+    margin: 12px 0 17px;
+    padding: 10px 0;
+    box-sizing: inherit;
+    border-top: 2px solid #444554;
+    border-bottom: 2px solid #444554;
+    align-items: flex-end;
+    justify-content: flex-end;
+    text-align: right;
+    font-size: 2em;
+    line-height: 1;
+    font-family: 'ABeeZee', 'Arial', sans-serif;
+}
+
+.button-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 45px);
+    grid-template-rows: repeat(5, 45px);
+    gap: 14px;
+    grid-template-areas:
+        "seven eight nine plus"
+        "four five six minus"
+        "one two three mult"
+        "dec naught backspace divide"
+        "clear clear equals equals";
+}
+
+button {
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid #444554;
+    outline: none;
+    background-color: #1a1721;
+    font: 1.3em 'ABeeZee';
+    color: #FFF;
+    line-height: 45px;
+    padding: 0;
+    height: 45px;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:after {
+    content: '';
+    position: absolute;
+    background: white;
+    opacity: 0;
+    transform: scale(1, 1);
+}
+
+button:not(.equals):not(.clear):after {
+    top: 19px;
+    left: 19px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+.equals:after, .clear:after {
+    top: 18px;
+    left: 43px;
+    width: 16px;
+    height: 7px;
+    border-radius: 7px;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1, 1);
+        opacity: 1;
+        background: rgba(255, 255, 255, .7);
+    }
+    
+    96% {
+        opacity: 1;
+        transform: scale(12, 12);
+        background: rgba(255, 255, 255, .1);
+    }
+}
+
+@keyframes popLong {
+    0% {
+        transform: scale(1, 1);
+        opacity: 1;
+        background: rgba(255, 255, 255, .7);
+        border-radius: 50%;
+    }
+    
+    96% {
+        opacity: 1;
+        transform: scale(7.7, 7.7);
+        background: rgba(255, 255, 255, .1);
+        border-radius: 200px;
+    }
+}
+  
+button:not(.equals):not(.clear):focus:not(:active)::after {
+    animation: pop 0.3s ease-out;
+}
+
+.equals:focus:not(:active):after, .clear:focus:not(:active):after {
+    animation: popLong 0.3s ease-out;
+}
+
+.zero {
+    grid-area: naught;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.add {
+    grid-area: plus;
+}
+
+.subtract {
+    grid-area: minus;
+}
+
+.multiply {
+    grid-area: mult;
+}
+
+.divide {
+    grid-area: divide;
+}
+
+.decimal {
+    grid-area: dec;
+}
+
+.backspace {
+    grid-area: backspace;
+}
+
+.clear {
+    grid-area: clear;
+    border-radius: 45px;
+}
+
+.equals {
+    grid-area: equals;
+    border-radius: 45px;
+    border: none;
+    background-color: rgb(141, 64, 185);
+}
+
+.function, .clear {
+    background-color: #444554;
+}
