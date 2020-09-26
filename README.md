@@ -2,6 +2,8 @@
 
 A simple calculator built for practice.
 
+[Link to live demo](https://lenachestnut.github.io/calculator/)
+
 ## Objective
 
 This project is a part of the Odin Project curriculum. The requirements for it can be found [here](https://www.theodinproject.com/courses/web-development-101/lessons/calculator).
@@ -25,7 +27,12 @@ This project is a part of the Odin Project curriculum. The requirements for it c
 
 ## UI
 
+### Desktop
+
 ![image](https://user-images.githubusercontent.com/29921988/94340325-8752fa80-0009-11eb-9ba6-2f0b41bd04dd.png)
+
+### Mobile
+
 ![image](https://user-images.githubusercontent.com/29921988/94340351-b0738b00-0009-11eb-9573-9a85804e1ee6.png)
 
 ## Tools
